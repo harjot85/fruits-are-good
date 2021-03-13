@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { Row, Col, Container, Alert } from "reactstrap";
+
+import { getLocalFruitDataByFruitName } from "../api/getFruitInfo";
+
 import FruitForm from "../components/FruitForm";
 import FruitInformation from "../components/FruitInformation";
-import { Row, Col, Container, Alert } from "reactstrap";
-import { getLocalFruitDataByFruitName } from "../api/getFruitInfo";
+
+import { TextCenter } from "../styled-components/styled";
 
 class Home extends Component {
     state = {
@@ -44,9 +48,9 @@ class Home extends Component {
         console.log("error ", this.state.errorState);
         return (
             <>
-                <div style={{ textAlign: "center", margin: "25px 0" }}>
+                <TextCenter spaceMargin={"50px 0"}>
                     <h1>Awesome fruits! </h1>
-                </div>
+                    </TextCenter>
                 <Row>
                     <Col>
                         {console.log(this.state.fruit)}
@@ -61,9 +65,9 @@ class Home extends Component {
                 <Container className="themed-container">
                     {this.state.errorState ? (
                         <Alert color="danger">
-                            <div style={{ textAlign: "center" }}>
+                            <TextCenter>
                                 <p>Fruit not found</p>
-                            </div>
+                            </TextCenter>
                         </Alert>
                     ) : (
                         Object.keys(this.state.fruitData).length > 0 && (
