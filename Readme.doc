@@ -5,10 +5,12 @@ The project has been structued as:
       - Home - class (stateful) component
  - Components: Modular react components (all are stateless components)
       - FruitForm - Lets the user interact with the controls to enter and get information on a particular fruit
+                  - Max length on input is 25 (of course it can be changed later)
       - FruitInformation - recieves props from Home component and displays those to the user 
 - API: Funtions that make API calls to the server 
 - Data: A json file that provides mock data
 - Tests: Enzyme tests for the components. This folder mimics the structure of the app
+         - use 'npm test' to run tests. If options are prompted, press a to run all the tests
 - Styled-Components: This is my preferred way of adding styles to the components. I have used npm package 'styled-components' for it.
 
 

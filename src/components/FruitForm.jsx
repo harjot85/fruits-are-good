@@ -20,6 +20,7 @@ const FruitForm = (props) => {
                                 placeholder="Please enter a fruit name "
                                 onChange={onInputChange}
                                 onKeyDown={onKeyDown}
+                                maxLength="25"
                             />
                         </Col>
                     
