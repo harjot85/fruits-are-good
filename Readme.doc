@@ -1,0 +1,28 @@
+Project Structure 
+
+
+Components
+
+
+How to Deploy
+
+
+Bonus: Write a couple of sentences on how you would interact with web service and what errors you would typically handle.
+While interacting with web services, we'd check for 
+ - status code (2xx indicates success, anything else indicates a problem)
+ - Ideally, the API returns a useful error message that we can bind to the app and provide user that message to help identify the problem.
+   - We can use exception handling (try catch) for that
+   - libraries like axios have in built objects that we can use to exract error message (example: error.response)
+   - we can also setup a re-try method that will retry sending the request a specified number of times 
+     example: 
+            axiosRetry(axios, {
+              retries: 2,
+              retryDelay,
+              // retry on Network Error & 5xx responses
+              retryCondition: axiosRetry.isRetryableError,
+            });
+
+
+
+Bonus: How would you add type safety to your project
+
