@@ -1,13 +1,28 @@
 Project Structure 
+-----------------
+The project has been structued as:
+ - Pages: Parent component that presents a meaningful view to the user 
+      - Home - class (stateful) component
+ - Components: Modular react components (all are stateless components)
+      - FruitForm - Lets the user interact with the controls to enter and get information on a particular fruit
+      - FruitInformation - recieves props from Home component and displays those to the user 
+- API: Funtions that make API calls to the server 
+- Data: A json file that provides mock data
+- Tests: Enzyme tests for the components. This folder mimics the structure of the app
 
-
-Components
 
 
 How to Deploy
+------------
+- The application has been deployed to Heroku which is a cloud platform at URL: https://fruits-are-awesome.herokuapp.com/
+- Note: Since this is a free platform, the server stays active for 30 mins only. So, if you are making request after a while, it may take a few moments 
+  for the server to wake up.
+- CI/CD has also been enabled. Any pushed to main branch(on git) will trigger the build and the new instance of the app will be deployed.
+
 
 
 Bonus: Write a couple of sentences on how you would interact with web service and what errors you would typically handle.
+------------------------------------------------------------------------------------------------------------------------
 While interacting with web services, we'd check for 
  - status code (2xx indicates success, anything else indicates a problem)
  - Ideally, the API returns a useful error message that we can bind to the app and provide user that message to help identify the problem.
@@ -22,6 +37,10 @@ While interacting with web services, we'd check for
               retryCondition: axiosRetry.isRetryableError,
             });
 
+Caching: 
+-------
+Window.localStorage can be used to cache the data to improve the performance and UX.
+.setItem(key, value) and .getItem(key) can be used to store and retrieve the data respectively
 
 
 Bonus: How would you add type safety to your project

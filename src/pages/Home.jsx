@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import FruitForm from "./FruitForm";
-import FruitInformation from "./FruitInformation";
+import FruitForm from "../components/FruitForm";
+import FruitInformation from "../components/FruitInformation";
 import { Row, Col, Container, Alert } from "reactstrap";
 import { getLocalFruitDataByFruitName } from "../api/getFruitInfo";
 

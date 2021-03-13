@@ -4,7 +4,7 @@ import Adapter from "enzyme-adapter-react-16";
 import FruitInformation from "../../components/FruitInformation";
 
 // UI Components
-import Home from "../../components/Home";
+import Home from "../../pages/Home";
 
 Enzyme.configure({ adapter: new Adapter() });
 
