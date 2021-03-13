@@ -9,7 +9,7 @@ The project has been structued as:
 - API: Funtions that make API calls to the server 
 - Data: A json file that provides mock data
 - Tests: Enzyme tests for the components. This folder mimics the structure of the app
-
+- Styled-Components: This is my preferred way of adding styles to the components. I have used npm package 'styled-components' for it.
 
 
 How to Deploy
@@ -41,7 +41,3 @@ Caching:
 -------
 Window.localStorage can be used to cache the data to improve the performance and UX.
 .setItem(key, value) and .getItem(key) can be used to store and retrieve the data respectively
-
-
-Bonus: How would you add type safety to your project
-
