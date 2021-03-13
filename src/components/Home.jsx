@@ -14,26 +14,29 @@ class Home extends Component {
     };
 
     onClickHandler = () => {
+        this.getData();
+    };
+
+    getData() {
         const { fruit } = this.state;
 
         if (fruit) {
             const fruitData = getLocalFruitDataByFruitName(fruit);
 
-            console.log("data", fruitData);
             if (fruitData === undefined) {
                 this.setState({ errorState: true });
             } else {
                 this.setState({ fruitData });
             }
         }
-    };
+    }
 
     onInputChange = (e) => {
         const fruit = e.target.value;
         this.setState({
             fruit,
             errorState: false,
-            fruitData: {}
+            fruitData: {},
         });
     };
 
@@ -50,6 +53,7 @@ class Home extends Component {
                         <FruitForm
                             onInputChange={this.onInputChange}
                             onClickHandler={this.onClickHandler}
+                            onKeyDown={this.onKeyDown}
                         />
                     </Col>
                 </Row>

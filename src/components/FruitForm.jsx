@@ -2,7 +2,7 @@ import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
 import React from "react";
 
 const FruitForm = (props) => {
-    const { onInputChange, onClickHandler } = props;
+    const { onInputChange, onClickHandler, onKeyDown } = props;
 
     return (
         <>
@@ -19,6 +19,7 @@ const FruitForm = (props) => {
                                 name="fruitName"
                                 placeholder="Please enter a fruit name "
                                 onChange={onInputChange}
+                                onKeyDown={onKeyDown}
                             />
                         </Col>
                     
